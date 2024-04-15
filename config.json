@@ -1,0 +1,13 @@
+{
+  "botToken": "6625916741:AAGWMJ1ouPaoLY6jNdhgqxjZqMEjk5jkbRw",
+  "adminId": ["1574812161"],
+  "prefix": "/",
+  "commands": {
+    "wiki": {
+      "usePrefix": false
+    },
+    "other_command": {
+      "usePrefix": true
+    }
+  }
+}
