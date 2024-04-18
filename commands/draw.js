@@ -8,7 +8,7 @@ module.exports.config = {
     role: "user",
     usePrefix: true,
     aliases: ["image"],
-    author: "OtinXSandip",
+    author: "MICRON",
 };
 
 module.exports.run = async function ({ bot, chatId, args }) {
