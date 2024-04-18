@@ -18,7 +18,7 @@ module.exports.run = async function ({ bot, chatId, args }) {
         return bot.sendMessage(chatId, "😡 Please provide a prompt.");
     }
 
-    const baseURL = `https://ashbina.onrender.com/gen2?prompt=${encodeURIComponent(text)}`;
+    const baseURL = `https://apis-1y9l.onrender.com/gen2?prompt=${encodeURIComponent(text)}`;
 
     // Send the "Generating" message and store its message ID
     const generatingMessage = await bot.sendMessage(chatId, "✅ Generating, please wait...");
