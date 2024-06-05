@@ -1,3 +1,4 @@
+// eval.js
 module.exports.config = {
     name: "eval",
     description: "Test code quickly",
@@ -28,7 +29,7 @@ module.exports.run = async function ({ bot, chatId, args }) {
         } else if (typeof msg === "undefined") {
             msg = "undefined";
         }
-        bot.sendMessage(chatId, msg);
+        sendLargeMessage(chatId, msg);
     }
 
     function out(msg) {
@@ -41,6 +42,17 @@ module.exports.run = async function ({ bot, chatId, args }) {
             obj[key] = value;
         });
         return obj;
+    }
+
+    async function sendLargeMessage(chatId, message) {
+        const MAX_MESSAGE_LENGTH = 4096;
+        if (message.length <= MAX_MESSAGE_LENGTH) {
+            await bot.sendMessage(chatId, message);
+        } else {
+            for (let i = 0; i < message.length; i += MAX_MESSAGE_LENGTH) {
+                await bot.sendMessage(chatId, message.substring(i, i + MAX_MESSAGE_LENGTH));
+            }
+        }
     }
 
     const cmd = `
