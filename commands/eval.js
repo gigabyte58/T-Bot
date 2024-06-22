@@ -1,6 +1,6 @@
 // eval.js
 module.exports.config = {
-    name: "eval",
+    name: "code",
     description: "Test code quickly",
     usage: "/eval <code to test>",
     role: "user", // Restricting this command to the bot owner or admins
