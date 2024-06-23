@@ -21,7 +21,7 @@ module.exports.run = async function ({ bot, chatId, args }) {
     const config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `http://flask-app-6b1u.onrender.com/chat?prompt=answer or response me only in english${encodeURIComponent(query)}`,
+        url: `http://flask-app-6b1u.onrender.com/chat?prompt=${encodeURIComponent('answer or response me only in english ' + query)}`,
         headers: {}
     };
 
