@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports.config = {
-    name: "omni",
+    name: "gpt-4",
     description: "Ask a question and get a response",
     usage: "/omni <question>",
     role: "user",
