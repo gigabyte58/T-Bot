@@ -10,7 +10,7 @@ module.exports.config = {
     role: "user", // Allow all users to execute
     usePrefix: true,
     aliases: ["youtube"],
-    author: "Samir Thakuri",
+    author: "MICRON",
 };
 
 module.exports.run = async function ({ bot, args, chatId }) {
@@ -42,7 +42,7 @@ module.exports.run = async function ({ bot, args, chatId }) {
 
         // Download and save the video to the cache directory with a random filename
         const randomFilename = `video_${Date.now()}_${Math.floor(Math.random() * 10000)}.mp4`;
-        const videoPath = path.join(__dirname, '..', 'cache', randomFilename);
+        const videoPath = path.join(__dirname, '..', 'tmp', randomFilename);
         await ytdl(topVideo.url).pipe(fs.createWriteStream(videoPath));
 
         // Send the video with relevant information
